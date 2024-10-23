@@ -1,0 +1,31 @@
+module CSAS
+{
+  imports
+  {
+    Base
+  }
+
+  model Canned_Soup_Ground
+  {
+    mesh = CanClosed,
+    texture = WorldItems/Canned_Soup_Ground,
+  }
+
+  model Canned_Soup_Ground_Open
+  {
+    mesh = CanOpen,
+    texture = WorldItems/Canned_Soup_Ground_Open,
+  }
+
+  model Canned_Stew_Ground
+  {
+    mesh = CanClosed,
+    texture = WorldItems/Canned_Stew_Ground_Open,
+  }
+
+  model Canned_Stew_Ground_Open
+  {
+    mesh = CanOpen,
+    texture = WorldItems/Canned_Stew_Ground_Open,
+  }
+}

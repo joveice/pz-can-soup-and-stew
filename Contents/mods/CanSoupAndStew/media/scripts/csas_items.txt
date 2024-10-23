@@ -1,0 +1,99 @@
+module CSAS
+{
+    imports
+    {
+        Base
+    }
+
+    item CannedSoup
+    {
+        DisplayName = Canned Soup,
+        DisplayCategory = Food,
+        Type = Food,
+        Weight = 0.8,
+        Icon = Canned_Soup,
+        CannedFood = TRUE,
+        CantEat = TRUE,
+        Packaged = TRUE,
+        HungerChange = 0,
+        UnhappyChange = 0,
+        ThirstChange = 0,
+        Calories = 0,
+        Carbohydrates = 0,
+        Lipids = 0,
+        Proteins = 0,
+        WorldStaticModel = Canned_Soup_Ground,
+        Tags = HasMetal,
+    }
+
+    item CannedSoupOpen
+    {
+        DisplayName = Opened Canned Soup,
+        DisplayCategory = Food,
+        Type = Food,
+        Weight = 0.8,
+        Icon = Canned_Soup_Open,
+        CannedFood = TRUE,
+        EatType = can,
+        Packaged = TRUE,
+        ReplaceOnUse = Base.TinCanEmpty,
+        DaysFresh = 2,
+        DaysTotallyRotten = 4,
+        HungerChange = 0,
+        UnhappyChange = 0,
+        ThirstChange = 0,
+        Calories = 0,
+        Carbohydrates = 0,
+        Lipids = 0,
+        Proteins = 0,
+        CustomContextMenu = Drink,
+        CustomEatSound = DrinkingFromCan,
+        WorldStaticModel = Canned_Soup_Ground_Open,
+        Tags = HasMetal,
+    }
+
+    item CannedStew
+    {
+        DisplayName = Canned Stew,
+        DisplayCategory = Food,
+        Type = Food,
+        Weight = 0.8,
+        Icon = Canned_Stew,
+        CannedFood = TRUE,
+        CantEat = TRUE,
+        Packaged = TRUE,
+        HungerChange = 0,
+        UnhappyChange = 0,
+        ThirstChange = 0,
+        Calories = 0,
+        Carbohydrates = 0,
+        Lipids = 0,
+        Proteins = 0,
+        WorldStaticModel = Canned_Stew_Ground,
+        Tags = HasMetal,
+    }
+
+    item CannedStewOpen
+    {
+        DisplayName = Opened Canned Stew,
+        DisplayCategory = Food,
+        Type = Food,
+        Weight = 0.8,
+        Icon = Canned_Stew_Open,
+        CannedFood = TRUE,
+        EatType = can,
+        Packaged = TRUE,
+        ReplaceOnUse = Base.TinCanEmpty,
+        DaysFresh = 2,
+        DaysTotallyRotten = 4,
+        HungerChange = 0,
+        UnhappyChange = 0,
+        ThirstChange = 0,
+        Calories = 0,
+        Carbohydrates = 0,
+        Lipids = 0,
+        Proteins = 0,
+        WorldStaticModel = Canned_Stew_Ground_Open,
+        Tags = HasMetal,
+    }
+}

@@ -1,0 +1,124 @@
+module CSAS
+{
+    imports
+    {
+        Base,
+        CSAS_Recipes
+    }
+
+    recipe Open Canned Soup
+    {
+       CannedSoup,
+       keep [Recipe.GetItemTypes.CanOpener],
+
+       Result:CannedSoupOpen,
+       OnCreate:CSAS_Recipes.OnCreate_OpenCanOfSoup,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       CanBeDoneFromFloor:true,
+       Sound:OpenCannedFood,
+    }
+
+    recipe Pour Out Canned Soup
+    {
+       destroy CannedSoupOpen,
+
+       Result:Base.TinCanEmpty,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       CanBeDoneFromFloor:true,
+       Sound:EmptyPan,
+    }
+
+    recipe Make 4 Cans of Soup
+    {
+       Base.PotOfSoup/Base.PotOfSoupRecipe,
+       Base.TinCanEmpty=4,
+       keep Base.TinOpener,
+
+       Result:CannedSoup=4,
+       OnCreate:CSAS_Recipes.OnCreate_MakeCansOfSoup4,
+       Time:80.0,
+       Category:Cooking,
+       SkillRequired:Cooking=4,
+       OnGiveXP:Recipe.OnGiveXP.Cooking3,
+       CanBeDoneFromFloor:true,
+       Sound:OpenCannedFood,
+    }
+
+    recipe Make 2 Cans of Soup
+    {
+       Base.PotOfSoup/Base.PotOfSoupRecipe,
+       Base.TinCanEmpty=2,
+       keep Base.TinOpener,
+
+       Result:CannedSoup=2,
+       OnCreate:CSAS_Recipes.OnCreate_MakeCansOfSoup2,
+       Time:80.0,
+       Category:Cooking,
+       SkillRequired:Cooking=5,
+       OnGiveXP:Recipe.OnGiveXP.Cooking3,
+       CanBeDoneFromFloor:true,
+       Sound:OpenCannedFood,
+    }
+
+    recipe Open Canned Stew
+    {
+       CannedStew,
+       keep [Recipe.GetItemTypes.CanOpener],
+
+       Result:CannedStewOpen,
+       OnCreate:CSAS_Recipes.OnCreate_OpenCanOfStew,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       CanBeDoneFromFloor:true,
+       Sound:OpenCannedFood,
+    }
+
+    recipe Pour Out Canned Stew
+    {
+       destroy CannedStewOpen,
+
+       Result:Base.TinCanEmpty,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       CanBeDoneFromFloor:true,
+       Sound:EmptyPan,
+    }
+
+    recipe Make 4 Cans of Stew
+    {
+       Base.PotOfStew,
+       Base.TinCanEmpty=4,
+       keep Base.TinOpener,
+
+       Result:CannedStew=4,
+       OnCreate:CSAS_Recipes.OnCreate_MakeCansOfStew4,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.Cooking3,
+       SkillRequired:Cooking=4,
+       CanBeDoneFromFloor:true,
+       Sound:OpenCannedFood,
+    }
+
+    recipe Make 2 Cans of Stew
+    {
+       Base.PotOfStew,
+       Base.TinCanEmpty=2,
+       keep Base.TinOpener,
+
+       Result:CannedStew=2,
+       OnCreate:CSAS_Recipes.OnCreate_MakeCansOfStew2,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.Cooking3,
+       SkillRequired:Cooking=5,
+       CanBeDoneFromFloor:true,
+       Sound:OpenCannedFood,
+    }
+}
